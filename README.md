@@ -1,5 +1,7 @@
 # markdown2pptx
-A framework for easily creating  pptx using markdown
+A Simple framework for easily creating  pptx using markdown.
+
+It does not yet operate.
 
 # Todo
 - set a title
