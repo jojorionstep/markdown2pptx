@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import re
+from pprint import pprint
 
 class Parse():
     def __init__(self):
@@ -16,11 +17,16 @@ class Parse():
             exit()
 
     def get_title(self):
-        count= 0
         subtitle_split = self.lines.split('\n## ')
-        title = subtitle_split.pop(0)
-
-        return title,subtitle_split
+        titlepage  = subtitle_split.pop(0)
+        pprint(titlepage)
+        m = re.search('#\s+(.*)\n(.*)',titlepage)
+        title = ''
+        subtitle = ''
+        if m:
+            title = m.group(1)
+            subtitle = m.group(2)
+        return title,subtitle,subtitle_split
 
 class Page():
     def __init__(self):

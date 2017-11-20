@@ -1,7 +1,9 @@
 # markdown2pptx
-A framework for easily creating  pptx using markdown
+A Simple framework for easily creating  pptx using markdown.
+
+#Usage
+
+python md2pptx.py -t template.pptx -i test.md -o out.pptx
 
 # Todo
-- set a title
-- set a new page
-- set a theme
+- set a list

@@ -11,7 +11,7 @@ def createpptx(mdfile,pptxfile,template):
 
     parse = Parse()
     parse.read(mdfile)
-    title_name , allslides =  parse.get_title()
+    title_name ,top_subtitle, allslides =  parse.get_title()
 
     prs = Presentation(template)
 
@@ -25,6 +25,8 @@ def createpptx(mdfile,pptxfile,template):
     try:
         title = slide.shapes.title
         title.text =  title_name
+        subtitle = slide.placeholders[1]
+        subtitle.text = top_subtitle
     except:
         print("No Title in template file")
         exit()
